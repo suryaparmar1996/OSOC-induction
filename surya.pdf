@@ -1,0 +1,101 @@
+Q1. How  to perform calculation directly from terminal? Which command is used? How to set limit of numbers to display after particular constant (say pi)?
+
+Ans:-we can do the calculation by the two ways:
+1. Gcalccmd:-
+It is the console version of Gnome Calculator utility present in Linux distributions like Ubuntu. To use the gcalccmd calculator tool, type the following command in the terminal: gcalccmd. After using these code calculations is simple. Just enter the numbers and desired operators in the terminal and press Enter. You can also use brackets in your calculations.
+Ex: - a. (7-2)+(16*3)                                        b. In (10)
+         53                                                     2.302585093
+Etc. Press CTRL+D to exit from the gcalccmd tool and still remain on the command line.
+
+2. Qalc:-Qalc is the terminal version of the calculator app, Qalculate. It doesn’t come pre-installed like gcalccmd. You can install Qalc using the following command in the terminal:
+sudo apt-get install qalc.
+After installation, if it fails to update currency exchange rates, then you can do so by following the steps below: In the terminal, type qalc and press enter. To update the currency exchange rates, type exrates and press enter.
+Ex:-  You can do unit conversion along with regular calculation stuff. Also, it remembers the answer from your last calculation. So, you can go like this:
+25+37
+25   +    37     =62
+Ans*5
+Ans      *      5    =310
+Press CTRL+D to exit qalc command line calculator utility.
+
+
+
+Q3. Commands used for finding memory usage ?
+
+Ans:- Commands used for finding memory usage:-
+1. free command :- The free command is the most simple and easy to use command to check memory usage on linux. 
+Syntax:- free –m
+The m option displays all data in MBs.It gives all the memory details of the total ram, used ram, free memory and cached amount of memory with buffers etc.
+
+2. /proc/meminfo :- The next way to check memory usage is to read the /proc/meminfo file. Know that the /proc file system does not contain real files. They are rather virtual files that contain dynamic information about the kernel and the system.
+Check the values of MemTotal, MemFree, Buffers, Cached, SwapTotal, SwapFree.
+They indicate same values of memory usage as the free command.
+Syntax:-  cat  /proc/meminfo
+
+3. vmstat :- The vmstat command with the s option, lays out the memory usage statistics much like the proc command.
+Syntax:-  vmstat
+
+4. top command :- The top command is generally used to check memory and cpu usage per process. However it also reports total memory usage and can be used to monitor the total RAM usage. The header on output has the required information.
+Check the KiB Mem and KiB Swap lines on the header. They indicate total, used and free amounts of the memory. The buffer and cache information is present here too, like the free command.
+Syntax:-  top
+
+5. htop :- we can install it by command:-  sudo apt install htop
+Similar to the top command, the htop command also shows memory usage along with various other details.
+The header on top shows cpu usage along with RAM and swap usage with the corresponding figures
+Syntax:-  htop
+
+
+
+Q4. Write a command to find a file with particular extension and contains particular word(string) in the file?
+ans:- we can find the particular extension and contains particular word in file using
+                    find . -name "new" | grep -R 'html'
+
+
+
+Q5. Create a directory and move in the directory.Create another directory inside this directory and move in it. write a single command to come out in original directory.
+Ans:-   *Create a directory as follows :- mkdir file_name
+        * move in that directory :- cd file_nameWrite 
+	*create another directory :- mkdir file_inner
+	*move in it :- cd file_inner
+	*comes out :- cd .. /..
+
+
+
+Q6. Why linux is more secured than other operating systems?Find certain parameters comparing with other operating systems??
+Ans:- Linux is an operating system like iOS and Windows. The popularity of the Linux OS has been increasing very rapidly and more smart devices with Linux OS is being developed nowadays. The biggest reasons behind the enormous increase in the popularity of Linux is considered the high tech security system of the Linux. Linux is an open source operating system whose code can be easily read out by the users, but still, it is the more secure operating system when compared to the other OS(s).
+
+Though Linux is very simple but still very secure operating system, which protects the important files from the attack of viruses and malware. So, if you are wondering how Linux is more secure than the giant operating systems, like iOS, Windows, and Android, then to better understand this, look at few advantages of Linux security.
+
+Certain parameters comparing with other operating system:-
+1.Strong community
+2.IPtablesHow 
+3.Different working environment
+4.A perk of accounts
+5. Strong community
+
+
+
+Q8. If you forget password how will you reset it ?IF
+
+1. Reboot to grub menu :- If Ubuntu is the only operating system on your computer, to get the boot menu to show, you have to hold down the Shift key during bootup.
+2. If you have a dual or multi-boot, the boot menu should appear without the need to hold down the shift key. :- From the boot menu, select recovery mode and hit Enter.
+3. You'll be presented with a few options. Select the  Drop to root shell prompt option and then press Enter.
+4. Once you're at the root shell prompt, if you have forgotten your username as well, type​ :- 
+ls /home
+This will list all the user accounts in your system.
+5. To reset the password, type passwd username where username is the username you want to reset, for example :- passwd ubuntuuser
+6. You'll then be prompted for a new password. Type your new password and then hit Enter.
+NOTE: When you type the password, nothing will appear to indicate your typing. You'll be prompted to retype the password. Repeat your password and hit Enter again.
+7. Now the password should be reset. Type exit to return to the recovery menu.
+8. After you get back to the recovery menu, select resume normal boot, and your new password should work now.
+
+
+
+
+ 
+
+	
+
+
+
+
+
